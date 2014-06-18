@@ -1,0 +1,109 @@
+.eyecandy figure {
+	display: inline-block;
+	position: relative;
+	margin: 1em 2%;
+	float: left;
+}
+
+	.eyecandy .full {
+		width: 92%;	
+	}
+	
+	.eyecandy .two-thirds {
+		width: 60%;
+	}
+	
+	.eyecandy .half {
+		width: 44%;
+	}
+	
+	.eyecandy .third {
+		width: 28%;
+	}
+	
+	.eyecandy .sixth {
+		width: 12%;
+	}
+	
+	
+	.eyecandy .shift-left {
+		left: -4%;
+	}
+	
+	.eyecandy .shift-right	 {
+		left: 4%;
+	}
+	
+	
+	.eyecandy .shift-up {
+		margin-top: -8%;
+	}
+	
+	.eyecandy .shift-up-double {
+		margin-top: -16%;
+	}
+	
+	.eyecandy .shift-up-triple {
+		margin-top: -24%;
+	}
+	
+	.eyecandy .shift-up-quattro {
+		margin-top: -32%;
+	}
+	
+	.eyecandy .shift-down {
+		margin-top: 8%;
+	}
+	
+	
+	.eyecandy .shift-sixth {
+		margin-left: 16%;
+	}
+	
+	.eyecandy .shift-third {
+		margin-left: 32%;
+	}
+	
+	.eyecandy .shift-half {
+		margin-left: 48%;
+	}
+
+
+
+figure a.footnote {
+	font-size: .75em;
+	position: absolute;
+	color: #7f7f7f;
+}
+	figure a.footnote:hover {
+		text-decoration: underline;
+	}
+
+	a.footnote.top {
+		top: -2em;
+	}
+	
+	a.footnote.left {
+		left: -2em;
+	}
+	
+	a.footnote.right {
+		right: -2em;
+	}
+
+
+
+figcaption {
+	font-size: .8em;
+	color: #7f7f7f;
+	margin: 1em auto;
+	line-height: 1.5em;
+	padding-bottom: 1em;
+}
+
+
+
+
+
+
+
