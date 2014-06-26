@@ -1,4 +1,143 @@
+console.log('Wer das liest, muss sich bewerben!'); // Du musst!
+console.log(' '); // Leerzeile
+console.log(' '); // Leerzeile
+
+var recalc = true;
+		
 $(document).ready(function(){
+
+	// Sticky Scroll + Sticky Menu
+	// mobile
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		// deaktiviert
+		
+	// desktop
+	} else {
+	
+		// STICKY SCROLL
+		$(".text").stick_in_parent();
+		
+		setTimeout(function(){
+			$(document.body).trigger("sticky_kit:recalc");
+		},5000);
+		
+		
+		$( window ).load(function() {
+			$(document.body).trigger("sticky_kit:recalc");
+			recalc = false;
+			// Handler for .load() called.
+		});
+		
+		
+		// STICKY MENU
+		var windowHeight = 0,
+			scrollDistance = 0;
+		
+		windowHeight = window.innerHeight;
+		$(window).scroll(function(){onscroll();});
+		
+		function onscroll() {
+			windowHeight = window.innerHeight;
+			scrollDistance = $(window).scrollTop();
+			var menu_offset = $('menu').offset().top;
+			var menu_height = $('menu').height();
+			
+			if(scrollDistance > windowHeight){
+				
+				$('main').css({
+					marginTop: menu_height
+				});
+				
+				$('menu').addClass('fix');
+				$('menu').removeClass('scroll');
+			}else{
+				
+				$('main').css({
+					marginTop: 0
+				});
+				
+				$('menu').addClass('scroll');
+				$('menu').removeClass('fix');
+			}
+		}
+	}
+	
+
+	function setActive(_name){
+	        $('.mmenu.active').removeClass('active');
+	        $('#menu_kontakt').removeClass('active');
+	        //console.log(_name);
+	
+	        switch(_name){
+	          case 'hochschule':
+	            $('#menu_hochschule').addClass('active');
+	          break;
+	
+	          case 'studium':
+	            $('#menu_studium').addClass('active');
+	          break;
+	
+	          case 'bewerbung':
+	            $('#menu_bewerbung').addClass('active');
+	          break;
+	
+	          case 'studentenleben':
+	            $('#menu_studentenleben').addClass('active');
+	          break;
+	
+	          case 'kontakt':
+	            $('#menu_kontakt').addClass('active');
+	          break;
+	        }
+	      }
+	
+	       $('#studium').waypoint(function() {
+	          setActive('studium');
+	      }, { offset: '20px' });
+	
+	      $('#studentenleben').waypoint(function() {
+	        setActive('studentenleben');
+	      }, { offset: '20px' });
+	
+	      $('#studentenleben').waypoint(function(direction) {
+	        if(direction === 'up'){
+	          setActive('studium');
+	        }
+	      }, { offset: '50%' });
+	
+	      $('#hochschule').waypoint(function() {
+	        setActive('hochschule');
+	      }, { offset: '20px' });
+	
+	      $('#hochschule').waypoint(function(direction) {
+	        if(direction === 'up'){
+	          setActive('studentenleben');
+	        }
+	      }, { offset: '50%' });
+	
+	       $('#bewerbung').waypoint(function() {
+	        setActive('bewerbung');
+	      }, { offset: '20px' });
+	
+	       $('#bewerbung').waypoint(function(direction) {
+	        if(direction === 'up'){
+	          setActive('hochschule');
+	        }
+	      }, { offset: '50%' });
+	
+	       $('#kontakt').waypoint(function() {
+	        setActive('kontakt');
+	      }, { offset: '20px' });
+	
+	       $('#kontakt').waypoint(function(direction) {
+	        if(direction === 'up'){
+	          setActive('bewerbung');
+	        }
+	      }, { offset: '50%' });
+	
+	
+		   // Videos einpassen
+		   $('figure').fitVids();	
 
 	// Scrollen animieren
 	$('a').click(function(e) {
@@ -76,40 +215,6 @@ $(document).ready(function(){
 	});
 	
 	
-	// STICKY MENU
-	var windowHeight = 0,
-		scrollDistance = 0;
-    
-	windowHeight = window.innerHeight;
-	$(window).scroll(function(){onscroll();});
-	
-	function onscroll() {
-		windowHeight = window.innerHeight;
-		scrollDistance = $(window).scrollTop();
-		var menu_offset = $('menu').offset().top;
-		var menu_height = $('menu').height();
-		
-		if(scrollDistance > windowHeight){
-			
-			$('main').css({
-				marginTop: menu_height
-			});
-			
-			$('menu').addClass('fix');
-			$('menu').removeClass('scroll');
-		}else{
-			
-			$('main').css({
-				marginTop: 0
-			});
-			
-			$('menu').addClass('scroll');
-			$('menu').removeClass('fix');
-		}
-	}
-    
-    
-    
     // STAFF PICK NAV
     var pSlider = $('#p-slideshow'),
     	pSlides = pSlider.find('.p-slide'),

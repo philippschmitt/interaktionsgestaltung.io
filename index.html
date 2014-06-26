@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Das ist IG: Interaktionsgestaltung studieren an der HfG Schwäbisch Gmünd</title>
-    <meta charset="utf-8">
-    <meta name="description" content="interaktionsgestaltung.io ist eine unabhängige Informationsseite über Studium und Studentenleben an der Hochschule für Gestaltung in Schwäbisch Gmünd.">
-    <meta name="keywords" content="Interaktionsgestaltung, Interaktion, Interface, User Experience, User Interface, IxD, UI, Design, Gestaltung, Schwäbisch Gmünd, studieren, Studium">
-    <meta name="author" content="Philipp Schmitt, Stephan Bogner">
+   <meta charset="utf-8">
+   <title>Das ist IG: Interaktionsgestaltung studieren an der HfG Schwäbisch Gmünd</title>
+   
+   <meta name="description" content="interaktionsgestaltung.io ist eine unabhängige Informationsseite über Studium und Studentenleben an der Hochschule für Gestaltung in Schwäbisch Gmünd.">
+   <meta name="keywords" content="Interaktionsgestaltung, Interaktion, Interface, User Experience, User Interface, IxD, UI, Design, Gestaltung, Schwäbisch Gmünd, studieren, Studium, HfG Schwäbisch Gmünd">
+   <meta name="author" content="Philipp Schmitt, Stephan Bogner">
+   
 <!--                                                    
                                                         __      
                                                        /\ \_
@@ -16,20 +18,9 @@
       \/__//__/   \/____/     \/__//__/   \/__/\/_/\/_/\/_/\/__/   `/___/> \/___/  \/___/ 
                                                                       /\___/ 
                                                                       \/__/ 
+-->
 
-              __            __        __                                         __                        
-   __        /\ \__        /\ \__    /\ \                                       /\ \                       
-  /\_\     __\ \ ,_\  ____ \ \ ,_\   \ \ \____     __   __  __  __     __   _ __\ \ \____     __    ___    
-  \/\ \  /'__`\ \ \/ /\_ ,`\\ \ \/    \ \ '__`\  /'__`\/\ \/\ \/\ \  /'__`\/\`'__\ \ '__`\  /'__`\/' _ `\  
-   \ \ \/\  __/\ \ \_\/_/  /_\ \ \_    \ \ \L\ \/\  __/\ \ \_/ \_/ \/\  __/\ \ \/ \ \ \L\ \/\  __//\ \/\ \ 
-   _\ \ \ \____\\ \__\ /\____\\ \__\    \ \_,__/\ \____\\ \___x___/'\ \____\\ \_\  \ \_,__/\ \____\ \_\ \_\
-  /\ \_\ \/____/ \/__/ \/____/ \/__/     \/___/  \/____/ \/__//__/   \/____/ \/_/   \/___/  \/____/\/_/\/_/
-  \ \____/                                                                                                 
-   \/___/                                                                                                  
 
-                                                  
--->    
-<!-- generiert mit http://patorjk.com/software/taag/ (Font Larry3D) -->   
       
    <link rel="stylesheet" href="_assets/css/reset.css"/>
    <script src="_assets/js/jquery-1.11.0.min.js"></script>
@@ -47,8 +38,20 @@
   }
 
 	body {
-		min-width: 960px;
+		min-width: 960px;		
+		font-family: 'Lato', 'Helvetica', 'sans-serif';
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
 	}
+	
+		main {
+			max-width: 1600px;
+			margin: 0 auto;
+			padding: 30px;
+		}
 	
 	 .float_breaker{
 	  width: 100%;
@@ -70,15 +73,6 @@
       font-size: 1.1em;
       margin: 0.8em 0;
       font-weight: bold;
-   }
-
-   body{
-      font-family: 'Lato', 'Helvetica', 'sans-serif';
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      width: 100%;
-      height: 100%;
    }
    
    article {
@@ -114,7 +108,7 @@
 	   }
 
    main{
-      margin: 30px;
+      /*margin: 30px;*/
    }
    img{
       width: 100%;
@@ -1032,13 +1026,7 @@
                  <figure class="two_third shift-third">
                    <a href="#bildquellen" class="footnote left">07</a>
                    <img src="img/studium_onformative.jpg" alt="onformative for Adobe CS6" />
-                   <figcaption class="shift-third"><a href="http://www.onformative.com/">Onformative</a> ist ein Berliner Studio für Generatives Design</figcaption>
-                 </figure>
-   
-                 <figure class="half shift-up-triple">
-                   <a href="#bildquellen" class="footnote left">08</a>
-                   <img src="img/studium_audi.jpg" alt="Audi Ingolstadt" />
-                   <figcaption><a href="http://www.audi.de/">Audi</a> solltest du kennen...</figcaption>
+                   <figcaption><a href="http://www.onformative.com/">Onformative</a> ist ein Berliner Studio für Generatives Design</figcaption>
                  </figure>               
    
                  <figure class="full shift-right">
@@ -1058,6 +1046,10 @@
                    <img src="img/studium_ixds.jpg" alt="Verückte Typen bei IXDS" />
                    <figcaption>Die Berliner Jungs und Mädels von <a href="http://www.ixds.com/">IXDS</a> arbeiten interdisziplinär und gestalten so die Zukunft mit</figcaption>
                  </figure>
+                 
+                 <div class="mappeninfo_wrapper two-thirds shift-right">
+                 	<p>Die genannten Büros stellen eine exemplarische Auswahl dar, keine exklusive. Warum sind denn immer alle gleich beleidigt?</p>
+                 </div>
               </p>
             </div>
          </article>
@@ -1605,115 +1597,6 @@
 			
 		</section>
 	</footer>
-
-		<script type="text/javascript">
-		
-		var recalc = true;
-		$( document ).ready(function() {
-
-      function setActive(_name){
-        $('.mmenu.active').removeClass('active');
-        $('#menu_kontakt').removeClass('active');
-        //console.log(_name);
-
-        switch(_name){
-          case 'hochschule':
-            $('#menu_hochschule').addClass('active');
-          break;
-
-          case 'studium':
-            $('#menu_studium').addClass('active');
-          break;
-
-          case 'bewerbung':
-            $('#menu_bewerbung').addClass('active');
-          break;
-
-          case 'studentenleben':
-            $('#menu_studentenleben').addClass('active');
-          break;
-
-          case 'kontakt':
-            $('#menu_kontakt').addClass('active');
-          break;
-        }
-      }
-
-       $('#studium').waypoint(function() {
-          setActive('studium');
-      }, { offset: '20px' });
-
-
-
-
-      $('#studentenleben').waypoint(function() {
-        setActive('studentenleben');
-      }, { offset: '20px' });
-
-      $('#studentenleben').waypoint(function(direction) {
-        if(direction === 'up'){
-          setActive('studium');
-        }
-      }, { offset: '50%' });
-
-
-
-
-
-      $('#hochschule').waypoint(function() {
-        setActive('hochschule');
-      }, { offset: '20px' });
-
-      $('#hochschule').waypoint(function(direction) {
-        if(direction === 'up'){
-          setActive('studentenleben');
-        }
-      }, { offset: '50%' });
-
-
-       $('#bewerbung').waypoint(function() {
-        setActive('bewerbung');
-      }, { offset: '20px' });
-
-       $('#bewerbung').waypoint(function(direction) {
-        if(direction === 'up'){
-          setActive('hochschule');
-        }
-      }, { offset: '50%' });
-
-
-
-       $('#kontakt').waypoint(function() {
-        setActive('kontakt');
-      }, { offset: '20px' });
-
-       $('#kontakt').waypoint(function(direction) {
-        if(direction === 'up'){
-          setActive('bewerbung');
-        }
-      }, { offset: '50%' });
-
-
-		   $(".text").stick_in_parent();
-		   
-		   // Videos einpassen
-		   $('figure').fitVids();
-		
-		   setTimeout(function(){
-		    $(document.body).trigger("sticky_kit:recalc");
-		  },5000);
-		   
-		
-		   $( window ).load(function() {
-		     $(document.body).trigger("sticky_kit:recalc");
-		     recalc = false;
-		    // Handler for .load() called.
-		  });
-		});
-		
-		console.log('Wer das liest, muss sich bewerben!');
-		
-	</script>
 	
 	<script src="_assets/js/animatescroll.js" type="text/javascript"></script>
 	<script src="_assets/js/site.js" type="text/javascript"></script>
