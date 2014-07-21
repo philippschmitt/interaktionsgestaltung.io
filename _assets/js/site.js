@@ -3,6 +3,21 @@ console.log(' '); // Leerzeile
 console.log(' '); // Leerzeile
 
 var recalc = true;
+
+
+// Google Analytics Outbound Links tracken
+$('a').click(function() {
+	var href = $(this).attr('href');
+	if( href.slice(0, 1) !== "#"){
+		ga('send', 'event', 'outbound', 'click', href, {'hitCallback': 
+			function () {
+				// callback
+			}
+		});
+	}
+});
+
+
 		
 $(document).ready(function(){
 
