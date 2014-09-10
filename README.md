@@ -2,17 +2,7 @@
 
 interaktionsgestaltung.io ist Informationsseite über Studium und Studentenleben an der Hochschule für Gestaltung Schwäbisch Gmünd — hochschulunabhängig von Studenten für angehende Interaktionsgestalter.
 
-
-## Information
-
-
-
-## TODO's
-
-- Code aufräumen
-- "Marketing"?
-- weitere TODO's finden
-
+[http://interaktionsgestaltung.io](http://interaktionsgestaltung.io)
 
 ## Kontakt
 mail@philippschmitt.com  
