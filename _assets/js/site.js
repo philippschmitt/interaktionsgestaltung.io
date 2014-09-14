@@ -8,6 +8,7 @@ var recalc = true;
 // Google Analytics Outbound Links tracken
 $('a').click(function() {
 	var href = $(this).attr('href');
+	console.log(href);
 	if( href.slice(0, 1) !== "#"){
 		ga('send', 'event', 'outbound', 'click', href, {'hitCallback': 
 			function () {
@@ -20,6 +21,41 @@ $('a').click(function() {
 
 		
 $(document).ready(function(){
+
+	var agenturContainer = $("#nach-dem-studium .eyecandy");
+	var agenturArray = $("#nach-dem-studium .random");
+	var agenturAnzahl = 3;
+
+	//$("#shuffleAgencies").click( function(){ shuffleAgencies() } );
+
+	/* Fisher Yates Shuffle - http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array */
+	function shuffle(array){
+		var currentIndex = array.length,
+			temporaryValue,
+			randomIndex;
+
+		while(0 !== currentIndex){
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}
+		return array;
+
+	}
+
+	function shuffleAgencies(){
+		agenturArray = shuffle( agenturArray );
+		agenturContainer.html("");
+		for (var i = 0; i < agenturAnzahl; i++){
+			agenturContainer.append(agenturArray[i]);
+		}
+		console.log('shuffled agencies');
+		$(document.body).trigger("sticky_kit:recalc");
+	}
+
+	shuffleAgencies();
 
 	// Sticky Scroll + Sticky Menu
 	// mobile
