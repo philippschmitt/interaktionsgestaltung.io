@@ -24,9 +24,12 @@ $(document).ready(function(){
 
 	var agenturContainer = $("#nach-dem-studium .eyecandy");
 	var agenturArray = $("#nach-dem-studium .random");
-	var agenturAnzahl = agenturArray.length;
+	//var agenturAnzahl = agenturArray.length;
+	var agenturAnzahl = 3;
 
-	//$("#shuffleAgencies").click( function(){ shuffleAgencies() } );
+	$("#shuffleAgencies").click( function(){ 
+		shuffleAgencies() 
+	});
 
 	/* Fisher Yates Shuffle - http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array */
 	function shuffle(array){
@@ -285,10 +288,21 @@ $(document).ready(function(){
     	});
     	
     	// Durchswitchen
-		pSlider.find('a#p-nav').click(function(e) {
+		pSlider.find('a#p-nav-next').click(function(e) {
 			e.preventDefault();
 			
 			pNextSlide();
+			
+			// clearInterval(pAutoSlide);
+			// pAutoSlide = setInterval(pNextSlide, pSpeed);
+						
+			return false;
+		});
+
+		pSlider.find('a#p-nav-prev').click(function(e) {
+			e.preventDefault();
+			
+			pPrevSlide();
 			
 			// clearInterval(pAutoSlide);
 			// pAutoSlide = setInterval(pNextSlide, pSpeed);
@@ -302,6 +316,20 @@ $(document).ready(function(){
 			// Offset verschieben			
 			pActiveSlide++;
 			if( pActiveSlide === pSlides.length ) pActiveSlide = 0;
+			var pOffset = -1 * pActiveSlide * pSlider.width();
+			
+			// Container verschieben
+			pSlider.find('#p-container').css({
+				marginLeft: pOffset
+			});
+		};
+
+		// zum vorherigen Projekt sliden
+		var pPrevSlide = function() {
+			
+			// Offset verschieben			
+			pActiveSlide--;
+			if( pActiveSlide ===  -1 || pActiveSlide ===  0) pActiveSlide = pSlides.length-1;
 			var pOffset = -1 * pActiveSlide * pSlider.width();
 			
 			// Container verschieben

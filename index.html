@@ -7,6 +7,9 @@
    <meta name="description" content="interaktionsgestaltung.io ist eine unabhängige Informationsseite über Studium und Studentenleben an der Hochschule für Gestaltung in Schwäbisch Gmünd.">
    <meta name="keywords" content="Interaktionsgestaltung, Interaktion, Interface, User Experience, User Interface, IxD, UI, Design, Gestaltung, Schwäbisch Gmünd, studieren, Studium, HfG Schwäbisch Gmünd">
    <meta name="author" content="Philipp Schmitt, Stephan Bogner">
+
+   <link rel="icon" href="_assets/img/favicon.png"/>
+   <link href="_assets/img/apple-touch-icon.png" rel="apple-touch-icon">
    
 <!--                                                    
                                                         __      
@@ -216,14 +219,15 @@
                   </p>
    
                   <p>
-                     Stöbere doch mal durch im <a href="http://ig.hfg-gmuend.de/">IG Portfolio</a>. 
+                     Stöbere doch mal im <a href="http://ig.hfg-gmuend.de/">IG Portfolio</a>. 
                   </p>
                </div>
                <div class="eyecandy">
                   <p>
                      
                   	<div id="p-slideshow" class="full">
-						<a href="#" id="p-nav" class="blockScroll">weiter</a>
+                      <a href="#" id="p-nav-prev" class="blockScroll">zurück</a>
+						          <a href="#" id="p-nav-next" class="blockScroll">weiter</a>
 
                   		<div id="p-container">
 
@@ -271,6 +275,13 @@
                           </div>
                         </div>
 
+                        <div class="p-slide">
+                          <a href="http://stephanbogner.de/projects/meta/" style="background-image:url(img/staffpicks_mehr.jpg)" class="p-link">Read More</a>
+                          <div>
+                            <h6>Noch viel mehr Projekte gibt's im <a href="http://stephanbogner.de/projects/meta/">IG Portfolio</a></h6>
+                          </div>
+                        </div>
+
                       </div> 
                   	</div> 
                   </p>
@@ -288,15 +299,44 @@
                  Vielfältige Berufsmöglichkeiten — ausnahmsweise stimmt's
                </blockquote>
                <p>
-                  Damit du auch weißt womit du am Ende deine Brötchen verdienst, haben wir hier eine kleine Auswahl interessanter Büros und Unternehmen zusammengestellt.
+                  Damit du auch weißt womit du am Ende deine Brötchen verdienst, haben wir hier eine kleine, <button id="shuffleAgencies">zufällige</button> Auswahl interessanter Büros und Unternehmen zusammengestellt.
                </p>
-               <!-- <p>
-                  <button id="shuffleAgencies">Du willst noch andere sehen?</button>
-               </p> -->
             </div>
             <div class="eyecandy">
             	<p>
-                 <figure class="random two_third shift-third">
+                
+
+                <figure class="random full">
+                   <a href="#bildquellen" class="footnote left"></a>
+                   <img src="img/arbeit_bene.jpg" alt="" />
+                   <figcaption>Der Designer <a href="http://benedikt-gross.de/">Benedikt Gross</a> befindet sich gerade im Aufbau seines eigenen Büros mit Fokus auf speculative and a computational Design</figcaption>
+                 </figure>
+
+                <figure class="random two-thirds">
+                   <a href="#bildquellen" class="footnote left"></a>
+                   <img src="img/arbeit_nand.jpg" alt="" />
+                   <figcaption>Im Herzen Berlins findet man <a href="http://www.nand.io/">Studio Nand</a>– Experten für Interaktion, Datenvisualisierung, und generatives Design.</figcaption>
+                 </figure>
+
+                 <figure class="random two-thirds shift-third">
+                   <a href="#bildquellen" class="footnote left"></a>
+                   <img src="img/arbeit_47nord.jpg" alt="" />
+                   <figcaption><a href="http://www.47nord.de/">47 Nord</a> trotzen ihrem Namen mit ihrem Sitz im Süden Deutschlands und vereinen dort Consulting, Design und Entwicklung in einem Büro</figcaption>
+                 </figure>  
+
+                 <figure class="random two-thirds shift-right">
+                   <a href="#bildquellen" class="footnote left"></a>
+                   <img src="img/arbeit_strukt.jpg" alt="" />
+                   <figcaption>Im wunderschönen Wien hat sich <a href="http://www.strukt.at">Strukt</a> niedergelassen. Bekannt für aufwändig inszenierte Events, Animationen und Design.</figcaption>
+                 </figure> 
+
+                 <figure class="random full shift-right">
+                   <a href="#bildquellen" class="footnote left"></a>
+                   <img src="img/arbeit_17k.jpg" alt="" />
+                   <figcaption>Das junge Studio <a href="http://www.17k.de/">17k</a> wurde von Ex-HfGlern ins Leben gerufen und fokussiert sich auf interaktive Exponate.</figcaption>
+                 </figure>
+
+                 <figure class="random two_thirds shift-third">
                    <a href="#bildquellen" class="footnote left">07</a>
                    <img src="img/arbeit_onformative.jpg" alt="onformative for Adobe CS6" />
                    <figcaption><a href="http://www.onformative.com/">Onformative</a> ist ein Berliner Studio für Generatives Design</figcaption>
@@ -327,17 +367,13 @@
 
                  <!-- 
                  	Inspiration für die nächste Runde. Wie wäre es mit ...
-					<a href="http://ddb-tribal.com">DBB Tribal</a>, 
-					<a href="http://www.designaffairs.com">Design Affairs</a>, 
-					<a href="http://www.human-interface.de">Human Interface Design</a>, 
-					<a href="http://nand.io">Studio NAND</a>,
-					<a href="http://www.meso.net">Meso</a>, 
-					<a href="http://www.precious-forever.com">Precious Forever</a>, 
-					<a href="http://www.strukt.at">Strukt</a>, 
-					<a href="http://www.17k.de/">17k</a>, 
-					<<a href="http://artcom.de/de/">ART + COM</a>, 
-					<a href="http://benedikt-gross.de/">Benedikt Gross</a>, 
-					<a href="http://www.ideo.com/de/">IDEO</a>
+        					<a href="http://ddb-tribal.com">DBB Tribal</a>, 
+        					<a href="http://www.designaffairs.com">Design Affairs</a>, 
+        					<a href="http://www.human-interface.de">Human Interface Design</a>, 
+        					<a href="http://www.meso.net">Meso</a>, 
+        					<a href="http://www.precious-forever.com">Precious Forever</a>, 
+        					<<a href="http://artcom.de/de/">ART + COM</a>, 
+        					<a href="http://www.ideo.com/de/">IDEO</a>
 			  	 -->
               </p>
             </div>
@@ -719,8 +755,9 @@
                      </p>
                      <p class="dates">
                         <span>Bewerbungsschluss</span>
-                          Für Sommersemester - 15. November 2014<br>
-                         Für Wintersemester - 15. Mai 2015
+                          
+                         Für Wintersemester - 15. Mai 2015<br>
+                         Für Sommersemester - (Sobald wir mehr wissen)
                        </p>
       
                        <p>
