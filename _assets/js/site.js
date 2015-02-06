@@ -25,7 +25,7 @@ $(document).ready(function(){
 	var agenturContainer = $("#nach-dem-studium .eyecandy");
 	var agenturArray = $("#nach-dem-studium .random");
 	//var agenturAnzahl = agenturArray.length;
-	var agenturAnzahl = 3;
+	var agenturAnzahl = 5;
 
 	$("#shuffleAgencies").click( function(){ 
 		shuffleAgencies() 
