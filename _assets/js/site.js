@@ -8,7 +8,7 @@ var recalc = true;
 // Google Analytics Outbound Links tracken
 $('a').click(function() {
 	var href = $(this).attr('href');
-	console.log(href);
+	//console.log(href);
 	if( href.slice(0, 1) !== "#"){
 		ga('send', 'event', 'outbound', 'click', href, {'hitCallback': 
 			function () {
@@ -54,7 +54,6 @@ $(document).ready(function(){
 		for (var i = 0; i < agenturAnzahl; i++){
 			agenturContainer.append(agenturArray[i]);
 		}
-		console.log('shuffled agencies');
 		$(document.body).trigger("sticky_kit:recalc");
 	}
 
@@ -120,7 +119,6 @@ $(document).ready(function(){
 	function setActive(_name){
 	        $('.mmenu.active').removeClass('active');
 	        $('#menu_kontakt').removeClass('active');
-	        //console.log(_name);
 	
 	        switch(_name){
 	          case 'hochschule':
