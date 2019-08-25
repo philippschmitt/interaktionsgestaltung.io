@@ -19,6 +19,20 @@ body {
   padding: 30px;
 }
 
+#outdated {
+  background: coral;
+  padding: 2em;
+  text-align: center;
+  color: #fff;
+  margin: 3em 3em -2em 3em;
+}
+
+  #outdated a {
+    color: #fff;
+    font-weight: bold;
+    border-color: #fff;
+  }
+
 .float_breaker{
   width: 100%;
   clear: both;
